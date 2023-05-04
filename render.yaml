@@ -11,6 +11,7 @@ services:
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
+        value: "postgres://project_bank:password@project_bank_host:5432/project_bank"
         fromDatabase:
           name: project-bank
           property: connectionString
