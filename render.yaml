@@ -2,7 +2,6 @@ databases:
   - name: project_bank
     databaseName: project_bank
     user: project_bank
-
 services:
   - type: web
     name: app_name
@@ -12,8 +11,5 @@ services:
     envVars:
       - key: DATABASE_URL
         value: "postgres://project_bank:password@project_bank_host:5432/project_bank"
-        fromDatabase:
-          name: project-bank
-          property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
