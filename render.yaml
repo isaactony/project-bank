@@ -4,7 +4,7 @@ databases:
     user: project_bank
 services:
   - type: web
-    name: app_name
+    name: project-bank
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
